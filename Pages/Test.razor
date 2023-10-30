@@ -1,0 +1,28 @@
+﻿@page "/test"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app Charitha.
+
+<SurveyPrompt Title="How is Blazor for you Chari?" />
+
+<h2>Counter</h2>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 10;
+
+    private void IncrementCount()
+    {
+        currentCount--;
+        if (currentCount == 4)
+        {
+            currentCount = 25;
+        }
+    }
+}
